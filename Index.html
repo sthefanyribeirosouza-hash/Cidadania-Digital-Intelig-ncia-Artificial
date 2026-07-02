@@ -3,79 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital e IA</title>
+    <title>Cidadania Digital & IA - Combate às Deepfakes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Cidadania Digital e Inteligência Artificial</h1>
-    <p>O impacto das Deepfakes e da Desinformação na Sociedade</p>
-</header>
+    <header>
+        <div class="header-container">
+            <h1>Cidadania Digital</h1>
+            <button id="toggle-dark-mode" class="btn-mode">🌓 Modo Escuro</button>
+        </div>
+    </header>
 
-<section>
-    <h2>O que são Deepfakes?</h2>
-    <p>
-        Deepfakes são vídeos, imagens ou áudios manipulados com Inteligência
-        Artificial para parecerem reais. Eles podem ser usados para entretenimento,
-        mas também para espalhar desinformação e enganar as pessoas.
-    </p>
-</section>
+    <main>
+        <section id="introducao">
+            <h2>O Impacto das Deepfakes na Sociedade</h2>
+            <p>Com o avanço da Inteligência Artificial, a criação de mídias falsas hiper-realistas (deepfakes) tornou-se um desafio social. Entender como identificar essas manipulações é fundamental para a cidadania digital.</p>
+        </section>
 
-<section>
-    <h2>Fake News e Desinformação</h2>
-    <p>
-        Fake news são notícias falsas divulgadas como verdadeiras. Quando
-        combinadas com Inteligência Artificial, podem ser produzidas rapidamente,
-        dificultando a identificação da verdade.
-    </p>
-</section>
+        <section id="dicas" class="cards-container">
+            <div class="card">
+                <h3>🔍 Como Identificar?</h3>
+                <p>Preste atenção em piscadas de olhos não naturais, falhas na iluminação do rosto e áudios que parecem robóticos.</p>
+            </div>
+            <div class="card">
+                <h3>⚠️ O Perigo</h3>
+                <p>A desinformação automatizada pode arruinar reputações e manipular debates públicos em instantes.</p>
+            </div>
+        </section>
 
-<section>
-    <h2>Como identificar uma Deepfake?</h2>
-    <ul>
-        <li>Observe expressões faciais estranhas.</li>
-        <li>Verifique se o movimento dos lábios acompanha a voz.</li>
-        <li>Pesquise em fontes confiáveis.</li>
-        <li>Desconfie de conteúdos sensacionalistas.</li>
-        <li>Confira se outros veículos divulgaram a mesma informação.</li>
-    </ul>
-</section>
+        <section id="quiz-section">
+            <h2>Desafio Anti-Desinformação</h2>
+            <p>Se você receber um vídeo bombástico de uma pessoa pública falando algo absurdo, qual deve ser sua atitude?</p>
+           
+            <form id="quiz-form">
+                <div class="options">
+                    <label class="option-container">
+                        <input type="radio" name="quiz-answer" value="errada1" required>
+                        <span>Compartilhar imediatamente para alertar o máximo de pessoas.</span>
+                    </label>
+                   
+                    <label class="option-container">
+                        <input type="radio" name="quiz-answer" value="correta">
+                        <span>Desconfiar, verificar portais de notícias e checar imperfeições no vídeo.</span>
+                    </label>
+                   
+                    <label class="option-container">
+                        <input type="radio" name="quiz-answer" value="errada2">
+                        <span>Acreditar totalmente, afinal, imagens e vídeos não mentem.</span>
+                    </label>
+                </div>
 
-<section>
-    <h2>Boas práticas de segurança digital</h2>
-    <ul>
-        <li>Use senhas fortes.</li>
-        <li>Ative a autenticação em dois fatores.</li>
-        <li>Não compartilhe notícias sem verificar.</li>
-        <li>Mantenha seus aplicativos atualizados.</li>
-        <li>Denuncie conteúdos falsos.</li>
-    </ul>
-</section>
+                <button type="submit" id="btn-submit">Verificar Resposta</button>
+            </form>
 
-<section class="quiz">
-    <h2>Quiz</h2>
+            <div id="quiz-result"></div>
+        </section>
 
-    <p>1. Deepfakes são:</p>
-    <button onclick="resposta(true)">Conteúdos manipulados por IA</button>
-    <button onclick="resposta(false)">Fotos comuns</button>
+        <section id="ia-do-bem">
+            <h2>🤖 A IA contra as Deepfakes</h2>
+            <p>Se por um lado a Inteligência Artificial facilita a criação de conteúdos falsos, por outro, ela é a principal ferramenta de defesa. Cientistas usam algoritmos de IA para identificar inconsistências invisíveis ao olho humano.</p>
+           
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Análise Biométrica</h3>
+                    <p>A IA analisa o fluxo sanguíneo invisível no rosto das pessoas em vídeos e os padrões de respiração para validar a autenticidade.</p>
+                </div>
+                <div class="card">
+                    <h3>Metadados e Rastreamento</h3>
+                    <p>Ferramentas verificam a "assinatura digital" do arquivo para descobrir onde e quando ele foi modificado.</p>
+                </div>
+            </div>
+        </section>
 
-    <p>2. Antes de compartilhar uma notícia devemos:</p>
-    <button onclick="resposta(true)">Verificar a fonte</button>
-    <button onclick="resposta(false)">Compartilhar imediatamente</button>
+        <section id="checklist-section">
+            <h2>✅ Seu Guia de Bolso Anti-Fake</h2>
+            <p>Antes de compartilhar qualquer conteúdo impactante na internet, passe pelo filtro da cidadania digital:</p>
+           
+            <ul class="checklist-ia">
+                <li>
+                    <input type="checkbox" id="check1">
+                    <label for="check1"><strong>Quem postou?</strong> A fonte é confiável ou uma conta anônima?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check2">
+                    <label for="check2"><strong>Outros portais dizem o mesmo?</strong> Grandes veículos de imprensa confirmaram a notícia?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check3">
+                    <label for="check3"><strong>Mexeu com suas emoções?</strong> Notícias falsas são feitas para gerar raiva ou medo extremo.</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check4">
+                    <label for="check4"><strong>Olhou de perto?</strong> Há cortes estranhos de áudio, sombras desalinhadas ou dentes borrados?</label>
+                </li>
+            </ul>
+        </section>
+       
+    </main>
 
-    <p>3. Fake news podem causar prejuízos?</p>
-    <button onclick="resposta(true)">Sim</button>
-    <button onclick="resposta(false)">Não</button>
+    <footer>
+        <p>&copy; 2026 - Desenvolvido para o Projeto de Educação Digital e IA. Conteúdo Autoral.</p>
+    </footer>
 
-    <h3 id="resultado"></h3>
-</section>
-
-<footer>
-    <p>Projeto Escolar - Educação Digital e IA</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-</html>
