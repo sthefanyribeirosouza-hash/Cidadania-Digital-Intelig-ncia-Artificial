@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
    
     // 1. MODO ESCURO
     const btnDarkMode = document.getElementById('toggle-dark-mode');
